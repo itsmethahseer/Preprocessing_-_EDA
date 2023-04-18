@@ -1,0 +1,8 @@
+Company,fuel-type,num-of-doors,body-style,num-of-cylinderes
+audi,gas,2,sedan,five
+audi,gas,4,wagon,five
+bmw,gas,2,sedan,four
+bmw,gas,2,sedan,four
+bmw,gas,2,sedan,six
+mercedes-benz,diesel,4,sedan,five
+mercedes-benz,diesel,4,wagon,five

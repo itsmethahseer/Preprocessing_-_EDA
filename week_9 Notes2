@@ -1,0 +1,53 @@
+-->Mean removal involves subtracting the mean of the feature from each data point in that feature.
+-->Variance scaling involves dividing each data point in a feature by the standard deviation of that feature.
+-->Standardization is a combination of mean removal and variance scaling, and involves subtracting the mean and dividing by the standard deviation of each feature. This results in features that are centered around zero and have unit variance. Standardization is a commonly used technique in machine learning and is often applied to features that have significantly different scales or distributions.
+
+-->An alternative standardization is scaling features to lie between a given minimum and maximum value, often between zero and one, or so that the maximum absolute value of each feature is scaled to unit size. This can be achieved using MinMaxScaler or MaxAbsScaler.
+
+-->One of the standradization technique is feature scaling.The main purpose of feature scaling is to ensure that each feature is measured on a comparable scale so that they can be compared and combined in meaningful ways by machine learning algorithms.
+
+-->if our dataset contains many outliers we want to use Robestscaler.
+-->kernel matrix:A kernel matrix is a square matrix that represents the similarity between pairs of data points in a dataset.
+--->In Non linear Distribution there are Uniform and Gausian distrbutions.
+--> In Uniform distributed data sets , we use a method called QuantileTransformer , which transforms this type data sets into most less in outliers,etc.
+-->Power transforms are a family of parametric, monotonic transformations that are applied to make data more Gaussian-like. This is useful for modeling issues related to heteroscedasticity (non-constant variance), or other situations where normality is desired.
+
+-->Normalization:Normalization is the process of scaling individual samples to have unit norm,ie each vector has length 1.For that we use normalize() from the preprocessing of scikit library.
+
+-->Standardization means set the mean=0 and varience=1.
+ie,MaxABSScaler->[-1,1]
+   Minmaxscaler->[0,1]
+If we want to teach a machine text, if we normalize the text by calculating euclidian distance among the words,we can understand it is very less, this is a important of Normalization.
+   
+-->Feature binarization:Feature binarization is the process of thresholding numerical features to get boolean values.
+
+-->Polynomial Features: It is use to calculate the non linear relationships between the target variable.
+
+
+-->Exploritory Data Analysis:
+It is a process to understand a data in depth and learn different characteristics from the data,often with visual means,This will allow us to build a feel of our data and find a better pattern in it.
+        ->it removes irregularities and unregular values from the data.
+        ->Help us prepare dataset for our purpose.
+        ->Allow on machine learning model to predict a better output.
+        ->Give us more accurate result.
+        ->Give the relationships between variables.
+Steps:
+    1)Understand the variables in the dataset:
+    2)Cleaning the dataset:may be we want to remove unnecessory columns ,removing the outliers in the dataset etc.
+    3)Analysis of relation between variables.
+    
+    
+    
+-->Git:
+It is a distributed virtual controle system.
+
+
+    
+
+
+
+
+
+
+
+
