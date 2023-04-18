@@ -86,12 +86,57 @@ Performance concepts are essential in machine learning because they enable us to
 
 4.F1-score: F1-score is a weighted average of precision and recall, with equal importance given to both measures. It is expressed as the harmonic mean of precision and recall.
 
-5.ROC curve: The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classifier as its discrimination threshold is varied. It plots the true positive rate against the false positive rate at various threshold settings.
+5.ROC curve: The ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classifier as its discrimination threshold is varied. 
+It plots the true positive rate against the false positive rate at various threshold settings.
 
 
-6.AUC: The AUC (Area Under the Curve) is a metric that measures the overall performance of a binary classifier, taking into account all possible threshold settings for the model. It ranges from 0 to 1, with a higher score indicating better performance.
+6.AUC: The AUC (Area Under the Curve) is a metric that measures the overall performance of a binary classifier, taking into account all possible threshold settings for the model. 
+It ranges from 0 to 1, with a higher score indicating better performance.
 
 7.Confusion matrix: A confusion matrix is a table that shows the number of true positives, true negatives, false positives, and false negatives of a model.
+
+
+
+-->Vectorized concepts:
+In the context of high-level languages like Python, Matlab, and R, the term vectorization describes the use of optimized, pre-compiled code written in a low-level language (e.g. C) 
+to perform mathematical operations over a sequence of data. 
+This is done in place of an explicit iteration written in the native language code (e.g. a “for-loop” written in Python). Vectorization allows the elimination 
+of the for-loops in python code. It is especially important in Deep learning as we are dealing with large numbers of datasets. So, it allows the code to run quickly 
+and helps train the algorithms faster.
+
+
+
+when looking towards to logistic regression examples, consider a equation Z=b+W^T * X
+So to compute the Z, we will need to write a for-loop for a non-vectorized functions
+For the vectorized version in NumPy, we simply calculate the dot product of the two vectors.(W and X)
+If we use the time function to calculate the time for both operations, we can see that the vectorized version is significantly faster than the non-vectorized version. 
+The time factor especially gets compounded when we are dealing with very large matrixes.
+
+->As we can see from the code above, even though we have the same answers for the multiplication (250069.16), our dot product is almost 118x faster. Also, since we 
+can run this function on SIMB, the algorithm takes advantage of the parallelism which uses the native dot product to get the results faster.
+
+SIMD is short for Single Instruction/Multiple Data, while the term SIMD operations refer to a computing method that enables the processing of multiple data with a 
+single instruction. In contrast, the conventional sequential approach using one instruction to process each individual data is called scalar operations. Using a simple
+summation as an example, the difference between the scalar and SIMD operations is illustrated below. See below for how each method handles the same four sets of 
+additions.
+
+
+-->Optimization concepts:
+        1.Gradient Descent: It is a first-order optimization algorithm that minimizes the cost function by iteratively adjusting the model parameters in the direction 
+        of the negative gradient of the cost function.
+        2.Stochastic Gradient Descent (SGD): It is an extension of the gradient descent algorithm that randomly selects a subset of training data for each iteration, 
+        which can speed up the convergence of the algorithm and reduce the memory requirements.
+        3.Mini-Batch Gradient Descent: It is a variation of SGD that computes the gradient using a small batch of data instead of a single training example, which can
+        balance the benefits of SGD and batch gradient descent.
+        4.Momentum: It is a technique that adds a momentum term to the gradient descent algorithm, which accumulates the past gradients to determine the direction of 
+        the update, thus helping to overcome the problem of oscillation in the cost function.
+        5.Adaptive Learning Rate Methods: These are a family of optimization techniques that adjust the learning rate during training based on the gradient information. 
+        Examples include AdaGrad, RMSProp, and Adam.
+        6.Conjugate Gradient: It is an optimization algorithm that uses the conjugate direction method to iteratively solve a system of linear equations, 
+        which is especially useful for optimizing quadratic functions.
+        7.L-BFGS: It is a quasi-Newton optimization algorithm that approximates the inverse Hessian matrix of the cost function to iteratively minimize the function, 
+        which is a popular choice for optimizing non-linear functions.
+
 
 
 
