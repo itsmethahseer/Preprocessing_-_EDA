@@ -1,6 +1,5 @@
 # Preprocessing and Exploratory Data Analysis (EDA)
 
-![Project Image](https://www.example.com/project_image.jpg)
 
 ## Overview
 
